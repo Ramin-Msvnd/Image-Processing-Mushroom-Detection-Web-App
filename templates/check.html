@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% block content %}
+<header class="navbar">
+
+
+    <h3 style="margin: auto;width: 80%; text-align: center; margin-top: 20px;  text-transform: uppercase">Poisonous Mushroom Detector</h3>
+  
+     <div style="text-align: center; margin-top: 20px">
+        
+     </div>
+     <img style="margin: auto; text-align: center; margin-top: 20px;  text-transform: uppercase; width: 600px" src="{{ url_for('static', filename='Mushrooms.jpeg') }}"/>
+    <form action="/check" method="post" enctype="multipart/form-data" style="margin-top: 100px; width: 80%; text-align: center; margin-left: 100px;" onsubmit="showloading()">
+        
+        
+        <span class="btn btn-default btn-file" style="margin-top:700px; margin:auto">
+          <input type="file" name="image" style="margin-top:20px;">
+      </span><br><br>
+          <input type="submit" value="Upload" class="btn btn-primary">
+    </form>
+      
+          
+      
+  </header>
+  
+
+{% endblock %}
